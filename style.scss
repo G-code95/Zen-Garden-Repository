@@ -1,5 +1,13 @@
+//imports
 @import url('https://fonts.googleapis.com/css2?family=Elsie:wght@900&family=Quattrocento+Sans&display=swap');
-//colors
+
+//mixins
+@mixin screen-breakpoint {
+    @media only screen and (min-width:$break-large) {
+        @content;
+    }
+}
+//variable - colors
 $color-1: #f15bb5; // Pink
 $color-2: grey;; // Grey
 $color-3: #fee440; // Yellow
@@ -8,9 +16,11 @@ $color-5: #9b5def; // Purple
 $color-6: #00f5d4; // Aqua
 $color-7: white; // White
 $color-8: black; // Black
-//typography
+//variable - typography
 $primary-font: 'Elsie', 'cursive';
 $secondary-font: 'Quattrocento Sans', sans-serif;
+//variable - length
+$break-large: 45em;
 
 body {
     margin: 0 auto;
@@ -42,6 +52,11 @@ header,
 //preamble 
 .preamble {
     background-color: $color-1;
+    @include screen-breakpoint {
+        padding: 5rem;
+       // display: grid;
+       // grid-template-columns: 1fr 1fr;
+    }
 }
 
 //explanation
@@ -75,3 +90,4 @@ footer {
 
 //resources
 
+//media query 

@@ -31,6 +31,11 @@ header,
 .preamble {
   background-color: #f15bb5;
 }
+@media only screen and (min-width: 45em) {
+  .preamble {
+    padding: 5rem;
+  }
+}
 
 .explanation {
   background-color: #fee440;
