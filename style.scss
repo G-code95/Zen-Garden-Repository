@@ -1,32 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Elsie:wght@900&family=Quattrocento+Sans&display=swap');
 //colors
 $color-1: #f15bb5; // Pink
-$color-2: grey;; // Aqua
+$color-2: grey;; // Grey
 $color-3: #fee440; // Yellow
 $color-4: #00bbf9; // Blue
 $color-5: #9b5def; // Purple
-$color-6: #00f5d4; // Grey
+$color-6: #00f5d4; // Aqua
 $color-7: white; // White
 $color-8: black; // Black
 //typography
 $primary-font: 'Elsie', 'cursive';
 $secondary-font: 'Quattrocento Sans', sans-serif;
+
+body {
+    margin: 0 auto;
+    font-family: $secondary-font;
+}
+h1 {
+    font-family: $primary-font;
+    text-align: center;
+    font-size: 3.5em;
+    text-transform: uppercase;
+}
+h1, header, .summary {
+    color: $color-2;
+}
+header, 
+.summary, 
+.preamble, 
+.explanation, 
+.participation, 
+.benefits, 
+.requirements,
+.design-selection, 
+.design-archives,
+.zen-resources {
+    padding: 2em;
+}
 //header and summary
 
 //preamble 
-.preambe {
+.preamble {
     background-color: $color-1;
 }
+
 //explanation
+.explanation {
+    background-color: $color-3;
+    color: $color-8;
+}
 
 //participation
+.participation {
+    background-color: $color-1;
+}
 
 //benefits
-
+.benefits {
+    background-color: $color-6;
+}
 //requirements
-
+.requirements {
+    background-color: $color-3;
+}
 //footer (icons and such)
-
+footer {
+    background-color: $color-6;
+    text-align: center;
+}
 //navigation (in sidebar)
+.design-selection, .design-archives {
+    background-color: $color-1;
+}
 
 //resources
 

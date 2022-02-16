@@ -1,4 +1,60 @@
-.preambe {
+@import url("https://fonts.googleapis.com/css2?family=Elsie:wght@900&family=Quattrocento+Sans&display=swap");
+body {
+  margin: 0 auto;
+  font-family: "Quattrocento Sans", sans-serif;
+}
+
+h1 {
+  font-family: "Elsie", "cursive";
+  text-align: center;
+  font-size: 3.5em;
+  text-transform: uppercase;
+}
+
+h1, header, .summary {
+  color: grey;
+}
+
+header,
+.summary,
+.preamble,
+.explanation,
+.participation,
+.benefits,
+.requirements,
+.design-selection,
+.design-archives,
+.zen-resources {
+  padding: 2em;
+}
+
+.preamble {
+  background-color: #f15bb5;
+}
+
+.explanation {
+  background-color: #fee440;
+  color: black;
+}
+
+.participation {
+  background-color: #f15bb5;
+}
+
+.benefits {
+  background-color: #00f5d4;
+}
+
+.requirements {
+  background-color: #fee440;
+}
+
+footer {
+  background-color: #00f5d4;
+  text-align: center;
+}
+
+.design-selection, .design-archives {
   background-color: #f15bb5;
 }
 
