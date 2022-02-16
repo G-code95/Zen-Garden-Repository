@@ -28,6 +28,10 @@ header,
   padding: 2em;
 }
 
+a:link {
+  text-decoration: none;
+}
+
 .preamble {
   background-color: #f15bb5;
 }
