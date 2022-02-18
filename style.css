@@ -28,7 +28,6 @@ header,
   padding: 2em;
 }
 
-
 a:link {
   text-decoration: none;
   color: black;
@@ -38,35 +37,98 @@ a:link {
   color: grey;
 }
 
+@media only screen and (min-width: 45em) {
+  header, .summary {
+    text-align: right;
+  }
+}
+
 .preamble {
   background-color: #f15bb5;
+  margin-bottom: 1.5em;
 }
 @media only screen and (min-width: 45em) {
   .preamble {
-    padding: 5rem;
+    padding: 5em;
+    display: grid;
+    grid-template: 50% 50%/50% 50%;
+  }
+  .preamble h3 {
+    grid-row: 1;
+    grid-column: 1;
+  }
+  .preamble p:nth-child(1) {
+    grid-row: 2;
+    grid-column: 1;
+  }
+  .preamble p:nth-child(2) {
+    grid-row: 2;
+    grid-column: 1;
+  }
+  .preamble p:nth-child(3) {
+    grid-row: 2;
+    grid-column: 2;
   }
 }
 
 .explanation {
   background-color: #fee440;
   color: black;
+  margin-bottom: 1.5em;
+}
+@media only screen and (min-width: 45em) {
+  .explanation {
+    max-width: 45em;
+    margin: 0 auto;
+    padding: 5em;
+    /*p {
+        background-color: rgba($color-3, 0.5);
+    }*/
+  }
 }
 
 .participation {
   background-color: #f15bb5;
+  margin-bottom: 1.5em;
+  margin-top: 1.5em;
+}
+@media only screen and (min-width: 45em) {
+  .participation {
+    padding: 5em;
+    display: grid;
+    grid-template: 50% 50%/1fr 1fr 1fr;
+  }
 }
 
 .benefits {
   background-color: #00f5d4;
+  margin-bottom: 1.5em;
+}
+@media only screen and (min-width: 45em) {
+  .benefits {
+    max-width: 25em;
+  }
 }
 
 .requirements {
   background-color: #fee440;
+  margin-bottom: 1.5em;
+}
+@media only screen and (min-width: 45em) {
+  .requirements {
+    max-width: 45em;
+    margin: 0 auto;
+    padding: 5em;
+    /*p {
+        background-color: rgba($color-3, 0.5);
+    }*/
+  }
 }
 
 footer {
   background-color: #00f5d4;
   text-align: center;
+  margin-bottom: 1.5em;
 }
 
 .design-selection, .design-archives {

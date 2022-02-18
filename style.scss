@@ -16,11 +16,15 @@ $color-5: #9b5def; // Purple
 $color-6: #00f5d4; // Aqua
 $color-7: white; // White
 $color-8: black; // Black
+
 //variable - typography
 $primary-font: 'Elsie', 'cursive';
 $secondary-font: 'Quattrocento Sans', sans-serif;
+
 //variable - length
 $break-large: 45em;
+$basic-margin-bottom: 1.5em;
+$container-padding-lg: 5em;
 
 body {
     margin: 0 auto;
@@ -47,15 +51,49 @@ header,
 .zen-resources {
     padding: 2em;
 }
+
+//link style
+a:link {
+    text-decoration: none;
+    color: black;
+  }
+
+   .summary a:link {
+    color: grey;
+  }
+
 //header and summary
+header, .summary {
+@include screen-breakpoint {
+    text-align: right;
+}}
+
 
 //preamble 
 .preamble {
     background-color: $color-1;
+    margin-bottom: $basic-margin-bottom;
     @include screen-breakpoint {
-        padding: 5rem;
-       // display: grid;
-       // grid-template-columns: 1fr 1fr;
+        padding: $container-padding-lg;
+        display: grid;
+        grid-template: 50% 50% / 50% 50%;
+        
+        h3 {grid-row: 1;
+            grid-column: 1;
+        }
+        p:nth-child(1) {
+            grid-row: 2;
+            grid-column: 1;
+        }
+        p:nth-child(2) {
+            grid-row: 2;
+            grid-column: 1;
+        }
+        p:nth-child(3) {
+            grid-row: 2;
+            grid-column: 2;
+        }
+
     }
 }
 
@@ -63,29 +101,60 @@ header,
 .explanation {
     background-color: $color-3;
     color: $color-8;
+    margin-bottom: $basic-margin-bottom;
+    @include screen-breakpoint {
+        max-width: 45em;
+        margin: 0 auto; 
+        padding: $container-padding-lg;
+        /*p {
+            background-color: rgba($color-3, 0.5);
+        }*/
+    }
 }
 
 //participation
 .participation {
     background-color: $color-1;
+    margin-bottom: $basic-margin-bottom;
+    margin-top: $basic-margin-bottom;
+    @include screen-breakpoint {
+        padding: $container-padding-lg;
+        display: grid;
+        grid-template: 50% 50% / 1fr 1fr 1fr;
+    }
 }
 
 //benefits
 .benefits {
     background-color: $color-6;
+    margin-bottom: $basic-margin-bottom;
+    @include screen-breakpoint {
+        max-width: 25em;
+    }
 }
 //requirements
 .requirements {
     background-color: $color-3;
+    margin-bottom: $basic-margin-bottom;
+    @include screen-breakpoint {
+        max-width: 45em;
+        margin: 0 auto; 
+        padding: $container-padding-lg;
+        /*p {
+            background-color: rgba($color-3, 0.5);
+        }*/
+    }
 }
 //footer (icons and such)
 footer {
     background-color: $color-6;
     text-align: center;
+    margin-bottom: $basic-margin-bottom;
 }
 //navigation (in sidebar)
 .design-selection, .design-archives {
     background-color: $color-1;
+    
 }
 
 //resources
