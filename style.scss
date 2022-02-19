@@ -20,6 +20,9 @@ $color-8: black; // Black
 //variable - typography
 $primary-font: 'Elsie', 'cursive';
 $secondary-font: 'Quattrocento Sans', sans-serif;
+$h1-fontsize: 40px;
+$h3-fontsize: 30px;
+$p-fontsize: 14px;
 
 //variable - length
 $break-large: 45em;
@@ -50,6 +53,10 @@ header,
 .design-archives,
 .zen-resources {
     padding: 2em;
+}
+
+h3 {
+    font-size: $h3-fontsize;
 }
 
 //link style
