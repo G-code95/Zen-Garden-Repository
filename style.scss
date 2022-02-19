@@ -20,9 +20,9 @@ $color-8: black; // Black
 //variable - typography
 $primary-font: 'Elsie', 'cursive';
 $secondary-font: 'Quattrocento Sans', sans-serif;
-$h1-fontsize: 40px;
-$h3-fontsize: 30px;
-$p-fontsize: 14px;
+$h1-fontsize: 4em;
+$h3-fontsize: 1.5em;
+$p-fontsize: 1em;
 
 //variable - length
 $break-large: 45em;
@@ -35,6 +35,7 @@ body {
 }
 h1 {
     font-family: $primary-font;
+    font-size:$h1-fontsize;
     text-align: center;
     font-size: 3.5em;
     text-transform: uppercase;
@@ -58,6 +59,11 @@ header,
 h3 {
     font-size: $h3-fontsize;
 }
+p {
+    font-size: $p-fontsize;
+}
+
+
 
 //link style
 a:link {
