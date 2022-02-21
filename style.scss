@@ -89,20 +89,21 @@ header, .summary {
     @include screen-breakpoint {
         padding: $container-padding-lg;
         display: grid;
-        grid-template: 50% 50% / 50% 50%;
+        grid-template: 20% 40% 40% / 50% 50%;
+        grid-column-gap: 1.5em;
         
         h3 {grid-row: 1;
             grid-column: 1;
         }
-        p:nth-child(1) {
+        :nth-child(2) {
             grid-row: 2;
             grid-column: 1;
         }
-        p:nth-child(2) {
-            grid-row: 2;
+        :nth-child(3) {
+            grid-row: 3;
             grid-column: 1;
         }
-        p:nth-child(3) {
+        :nth-child(4) {
             grid-row: 2;
             grid-column: 2;
         }
@@ -133,7 +134,24 @@ header, .summary {
     @include screen-breakpoint {
         padding: $container-padding-lg;
         display: grid;
-        grid-template: 50% 50% / 1fr 1fr 1fr;
+        grid-template: 20% 80% / 1fr 1fr 1fr;
+        grid-column-gap: 1.5em;
+            
+        h3 {grid-row: 1;
+            grid-column: 1;
+        }
+        :nth-child(2) {
+            grid-row: 2;
+            grid-column: 1;
+        }
+        :nth-child(3) {
+            grid-row: 2;
+            grid-column: 2;
+        }
+        :nth-child(4) {
+            grid-row: 2;
+            grid-column: 3;
+        }
     }
 }
 
@@ -167,8 +185,9 @@ footer {
 //navigation (in sidebar)
 .design-selection, .design-archives {
     background-color: $color-1;
-    
-}
+    @include screen-breakpoint {
+        padding: $container-padding-lg;
+    }}
 
 //resources
 

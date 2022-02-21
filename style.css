@@ -6,6 +6,7 @@ body {
 
 h1 {
   font-family: "Elsie", "cursive";
+  font-size: 4em;
   text-align: center;
   font-size: 3.5em;
   text-transform: uppercase;
@@ -13,16 +14,6 @@ h1 {
 
 h1, header, .summary {
   color: grey;
-}
-
-h1 {
-  font-size: 4em;
-}
-h3 {
-  font-size: 1.5em;
-}
-p {
-  font-size: 1em;
 }
 
 header,
@@ -36,6 +27,14 @@ header,
 .design-archives,
 .zen-resources {
   padding: 2em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+p {
+  font-size: 1em;
 }
 
 a:link {
@@ -61,21 +60,22 @@ a:link {
   .preamble {
     padding: 5em;
     display: grid;
-    grid-template: 50% 50%/50% 50%;
+    grid-template: 20% 40% 40%/50% 50%;
+    grid-column-gap: 1.5em;
   }
   .preamble h3 {
     grid-row: 1;
     grid-column: 1;
   }
-  .preamble p:nth-child(1) {
+  .preamble :nth-child(2) {
     grid-row: 2;
     grid-column: 1;
   }
-  .preamble p:nth-child(2) {
-    grid-row: 2;
+  .preamble :nth-child(3) {
+    grid-row: 3;
     grid-column: 1;
   }
-  .preamble p:nth-child(3) {
+  .preamble :nth-child(4) {
     grid-row: 2;
     grid-column: 2;
   }
@@ -106,7 +106,24 @@ a:link {
   .participation {
     padding: 5em;
     display: grid;
-    grid-template: 50% 50%/1fr 1fr 1fr;
+    grid-template: 20% 80%/1fr 1fr 1fr;
+    grid-column-gap: 1.5em;
+  }
+  .participation h3 {
+    grid-row: 1;
+    grid-column: 1;
+  }
+  .participation :nth-child(2) {
+    grid-row: 2;
+    grid-column: 1;
+  }
+  .participation :nth-child(3) {
+    grid-row: 2;
+    grid-column: 2;
+  }
+  .participation :nth-child(4) {
+    grid-row: 2;
+    grid-column: 3;
   }
 }
 
@@ -143,6 +160,11 @@ footer {
 
 .design-selection, .design-archives {
   background-color: #f15bb5;
+}
+@media only screen and (min-width: 45em) {
+  .design-selection, .design-archives {
+    padding: 5em;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
