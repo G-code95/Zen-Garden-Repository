@@ -140,6 +140,11 @@ header, .summary {
     background-color: $color-1;
     margin-bottom: $basic-margin-bottom;
     margin-top: $basic-margin-bottom;
+    p {
+        background-color: rgba($color-7, 0.5);
+        margin: 0;
+        padding: 1em;
+        }
     @include screen-breakpoint {
         padding: $container-padding-lg;
         display: grid;
@@ -168,6 +173,11 @@ header, .summary {
 .benefits {
     background-color: $color-6;
     margin-bottom: $basic-margin-bottom;
+    p {
+        background-color: rgba($color-7, 0.5);
+        margin: 0;
+        padding: 1em;
+        }
     @include screen-breakpoint {
         max-width: 25em;
     }
@@ -176,6 +186,11 @@ header, .summary {
 .requirements {
     background-color: $color-3;
     margin-bottom: $basic-margin-bottom;
+    p {
+        background-color: rgba($color-7, 0.5);
+        margin: 0;
+        padding: 1em;
+        }
     @include screen-breakpoint {
         max-width: 45em;
         margin: 0 auto; 
