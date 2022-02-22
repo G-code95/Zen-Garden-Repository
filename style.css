@@ -13,7 +13,7 @@ h1 {
 }
 
 h1, header, .summary {
-  color: grey;
+  color: gray;
 }
 
 header,
@@ -56,11 +56,16 @@ a:link {
   background-color: #f15bb5;
   margin-bottom: 1.5em;
 }
+.preamble p {
+  background-color: rgba(255, 255, 255, 0.5);
+  margin: 0;
+  padding: 1em;
+}
 @media only screen and (min-width: 45em) {
   .preamble {
     padding: 5em;
     display: grid;
-    grid-template: 20% 40% 40%/50% 50%;
+    grid-template: 20% 40% 60%/50% 50%;
     grid-column-gap: 1.5em;
   }
   .preamble h3 {
@@ -86,14 +91,16 @@ a:link {
   color: black;
   margin-bottom: 1.5em;
 }
+.explanation p {
+  background-color: rgba(255, 255, 255, 0.5);
+  margin: 0;
+  padding: 1em;
+}
 @media only screen and (min-width: 45em) {
   .explanation {
     max-width: 45em;
     margin: 0 auto;
     padding: 5em;
-    /*p {
-        background-color: rgba($color-3, 0.5);
-    }*/
   }
 }
 
