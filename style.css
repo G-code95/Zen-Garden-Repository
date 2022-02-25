@@ -1,14 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Elsie:wght@900&family=Quattrocento+Sans&display=swap");
 body {
+  font-size: 16px;
   margin: 0 auto;
   font-family: "Quattrocento Sans", sans-serif;
 }
 
 h1 {
   font-family: "Elsie", "cursive";
-  font-size: 4em;
+  font-size: 4rem;
   text-align: center;
-  font-size: 3.5em;
   text-transform: uppercase;
 }
 
@@ -26,15 +26,15 @@ header,
 .design-selection,
 .design-archives,
 .zen-resources {
-  padding: 2em;
+  padding: 2rem;
 }
 
 h3 {
-  font-size: 1.5em;
+  font-size: 1.5rem;
 }
 
 p {
-  font-size: 1em;
+  font-size: 1rem;
 }
 
 a:link {
@@ -46,7 +46,7 @@ a:link {
   color: grey;
 }
 
-@media only screen and (min-width: 45em) {
+@media only screen and (min-width: 45rem) {
   header, .summary {
     text-align: right;
   }
@@ -54,34 +54,47 @@ a:link {
 
 .preamble {
   background-color: #f15bb5;
-  margin-bottom: 1.5em;
+  margin-bottom: 1.5rem;
 }
+
 .preamble p {
   background-color: rgba(255, 255, 255, 0.5);
   margin: 0;
-  padding: 1em;
+  padding: 1rem;
 }
-@media only screen and (min-width: 45em) {
+
+@media only screen and (min-width: 45rem) {
   .preamble {
-    padding: 5em;
+    padding: 5rem;
+    display: -ms-grid;
     display: grid;
-    grid-template: 20% 40% 60%/50% 50%;
-    grid-column-gap: 1.5em;
+    -ms-grid-rows: 20% 40% 60%;
+    -ms-grid-columns: 50% 50%;
+        grid-template: 20% 40% 60% / 50% 50%;
+    grid-column-gap: 1.5rem;
   }
   .preamble h3 {
+    -ms-grid-row: 1;
     grid-row: 1;
+    -ms-grid-column: 1;
     grid-column: 1;
   }
   .preamble :nth-child(2) {
+    -ms-grid-row: 2;
     grid-row: 2;
+    -ms-grid-column: 1;
     grid-column: 1;
   }
   .preamble :nth-child(3) {
+    -ms-grid-row: 3;
     grid-row: 3;
+    -ms-grid-column: 1;
     grid-column: 1;
   }
   .preamble :nth-child(4) {
+    -ms-grid-row: 2;
     grid-row: 2;
+    -ms-grid-column: 2;
     grid-column: 2;
   }
 }
@@ -89,104 +102,126 @@ a:link {
 .explanation {
   background-color: #fee440;
   color: black;
-  margin-bottom: 1.5em;
+  margin-bottom: 1.5rem;
 }
+
 .explanation p {
   background-color: rgba(255, 255, 255, 0.5);
   margin: 0;
-  padding: 1em;
+  padding: 1rem;
 }
-@media only screen and (min-width: 45em) {
+
+@media only screen and (min-width: 45rem) {
   .explanation {
-    max-width: 45em;
+    max-width: 45rem;
     margin: 0 auto;
-    padding: 5em;
+    padding: 5rem;
   }
 }
 
 .participation {
   background-color: #f15bb5;
-  margin-bottom: 1.5em;
-  margin-top: 1.5em;
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
 }
+
 .participation p {
   background-color: rgba(255, 255, 255, 0.5);
   margin: 0;
-  padding: 1em;
+  padding: 1rem;
 }
-@media only screen and (min-width: 45em) {
+
+@media only screen and (min-width: 45rem) {
   .participation {
-    padding: 5em;
+    padding: 5rem;
+    display: -ms-grid;
     display: grid;
-    grid-template: 20% 80%/1fr 1fr 1fr;
-    grid-column-gap: 1.5em;
-  }
-  .participation h3 {
-    grid-row: 1;
-    grid-column: 1;
+    -ms-grid-rows: 20% 80%;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template: 20% 80% / 1fr 1fr 1fr;
+    grid-column-gap: 1.5rem h3;
+    grid-column-gap-grid-row: 1;
+    grid-column-gap-grid-column: 1;
   }
   .participation :nth-child(2) {
+    -ms-grid-row: 2;
     grid-row: 2;
+    -ms-grid-column: 1;
     grid-column: 1;
   }
   .participation :nth-child(3) {
+    -ms-grid-row: 2;
     grid-row: 2;
+    -ms-grid-column: 2;
     grid-column: 2;
   }
   .participation :nth-child(4) {
+    -ms-grid-row: 2;
     grid-row: 2;
+    -ms-grid-column: 3;
     grid-column: 3;
   }
 }
 
 .benefits {
   background-color: #00f5d4;
-  margin-bottom: 1.5em;
+  margin-bottom: 1.5rem;
 }
+
 .benefits p {
   background-color: rgba(255, 255, 255, 0.5);
   margin: 0;
-  padding: 1em;
+  padding: 1rem;
 }
-@media only screen and (min-width: 45em) {
+
+@media only screen and (min-width: 45rem) {
   .benefits {
-    max-width: 25em;
+    max-width: 25rem;
   }
 }
 
 .requirements {
   background-color: #fee440;
-  margin-bottom: 1.5em;
+  margin-bottom: 1.5rem;
 }
+
 .requirements p {
   background-color: rgba(255, 255, 255, 0.5);
   margin: 0;
-  padding: 1em;
+  padding: 1rem;
 }
-@media only screen and (min-width: 45em) {
+
+@media only screen and (min-width: 45rem) {
   .requirements {
-    max-width: 45em;
+    max-width: 45rem;
     margin: 0 auto;
-    padding: 5em;
+    padding: 5rem;
     /*p {
-        background-color: rgba($color-3, 0.5);
-    }*/
+            background-color: rgba($color-3, 0.5);
+        }*/
   }
 }
 
 footer {
   background-color: #00f5d4;
   text-align: center;
-  margin-bottom: 1.5em;
+  margin-bottom: 1.5rem;
 }
 
 .design-selection, .design-archives {
   background-color: #f15bb5;
 }
-@media only screen and (min-width: 45em) {
+
+@media only screen and (min-width: 45rem) {
   .design-selection, .design-archives {
-    padding: 5em;
+    padding: 5rem;
   }
 }
 
+.wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+}
 /*# sourceMappingURL=style.css.map */
