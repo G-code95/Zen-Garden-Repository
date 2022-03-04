@@ -129,6 +129,9 @@ header, .summary {
 }
 
 //explanation
+/*.explanation::before {
+    : url(svg/candyshoppegraphics-02.svg);
+}*/
 .explanation {
     background-color: $color-3;
     color: $color-8;

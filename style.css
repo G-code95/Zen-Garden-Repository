@@ -86,6 +86,9 @@ a:link {
   }
 }
 
+/*.explanation::before {
+    : url(svg/candyshoppegraphics-02.svg);
+}*/
 .explanation {
   background-color: #fee440;
   color: black;
