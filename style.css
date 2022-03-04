@@ -56,45 +56,32 @@ a:link {
   background-color: #f15bb5;
   margin-bottom: 1.5rem;
 }
-
 .preamble p {
   background-color: rgba(255, 255, 255, 0.5);
   margin: 0;
   padding: 1rem;
 }
-
 @media only screen and (min-width: 45rem) {
   .preamble {
     padding: 5rem;
-    display: -ms-grid;
     display: grid;
-    -ms-grid-rows: 20% 40% 60%;
-    -ms-grid-columns: 50% 50%;
-        grid-template: 20% 40% 60% / 50% 50%;
+    grid-template: 20% 40% 60%/50% 50%;
     grid-column-gap: 1.5rem;
   }
   .preamble h3 {
-    -ms-grid-row: 1;
     grid-row: 1;
-    -ms-grid-column: 1;
     grid-column: 1;
   }
   .preamble :nth-child(2) {
-    -ms-grid-row: 2;
     grid-row: 2;
-    -ms-grid-column: 1;
     grid-column: 1;
   }
   .preamble :nth-child(3) {
-    -ms-grid-row: 3;
     grid-row: 3;
-    -ms-grid-column: 1;
     grid-column: 1;
   }
   .preamble :nth-child(4) {
-    -ms-grid-row: 2;
     grid-row: 2;
-    -ms-grid-column: 2;
     grid-column: 2;
   }
 }
@@ -104,13 +91,11 @@ a:link {
   color: black;
   margin-bottom: 1.5rem;
 }
-
 .explanation p {
   background-color: rgba(255, 255, 255, 0.5);
   margin: 0;
   padding: 1rem;
 }
-
 @media only screen and (min-width: 45rem) {
   .explanation {
     max-width: 45rem;
@@ -124,41 +109,32 @@ a:link {
   margin-bottom: 1.5rem;
   margin-top: 1.5rem;
 }
-
 .participation p {
   background-color: rgba(255, 255, 255, 0.5);
   margin: 0;
   padding: 1rem;
 }
-
 @media only screen and (min-width: 45rem) {
   .participation {
     padding: 5rem;
-    display: -ms-grid;
     display: grid;
-    -ms-grid-rows: 20% 80%;
-    -ms-grid-columns: 1fr 1fr 1fr;
-        grid-template: 20% 80% / 1fr 1fr 1fr;
-    grid-column-gap: 1.5rem h3;
-    grid-column-gap-grid-row: 1;
-    grid-column-gap-grid-column: 1;
+    grid-template: 20% 80%/1fr 1fr 1fr;
+    grid-column-gap: 1.5rem;
+  }
+  .participation h3 {
+    grid-row: 1;
+    grid-column: 1;
   }
   .participation :nth-child(2) {
-    -ms-grid-row: 2;
     grid-row: 2;
-    -ms-grid-column: 1;
     grid-column: 1;
   }
   .participation :nth-child(3) {
-    -ms-grid-row: 2;
     grid-row: 2;
-    -ms-grid-column: 2;
     grid-column: 2;
   }
   .participation :nth-child(4) {
-    -ms-grid-row: 2;
     grid-row: 2;
-    -ms-grid-column: 3;
     grid-column: 3;
   }
 }
@@ -167,13 +143,11 @@ a:link {
   background-color: #00f5d4;
   margin-bottom: 1.5rem;
 }
-
 .benefits p {
   background-color: rgba(255, 255, 255, 0.5);
   margin: 0;
   padding: 1rem;
 }
-
 @media only screen and (min-width: 45rem) {
   .benefits {
     max-width: 25rem;
@@ -184,21 +158,16 @@ a:link {
   background-color: #fee440;
   margin-bottom: 1.5rem;
 }
-
 .requirements p {
   background-color: rgba(255, 255, 255, 0.5);
   margin: 0;
   padding: 1rem;
 }
-
 @media only screen and (min-width: 45rem) {
   .requirements {
     max-width: 45rem;
     margin: 0 auto;
     padding: 5rem;
-    /*p {
-            background-color: rgba($color-3, 0.5);
-        }*/
   }
 }
 
@@ -211,7 +180,6 @@ footer {
 .design-selection, .design-archives {
   background-color: #f15bb5;
 }
-
 @media only screen and (min-width: 45rem) {
   .design-selection, .design-archives {
     padding: 5rem;
@@ -219,9 +187,8 @@ footer {
 }
 
 .wrapper {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
 }
+
 /*# sourceMappingURL=style.css.map */

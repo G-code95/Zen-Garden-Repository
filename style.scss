@@ -7,6 +7,16 @@
         @content;
     }
 }
+@mixin paragraph {
+    background-color: $p-opacity;
+    margin: 0;
+    padding: 1rem;
+}
+@mixin lg-screen-container {
+    max-width: 45rem;
+    margin: 0 auto; 
+    padding: $container-padding-lg;
+}
 //variable - colors
 $color-1: rgb(241, 91, 181); // Pink
 $color-2: rgb(128, 128, 128);; // Grey
@@ -16,6 +26,7 @@ $color-5: rgb(155, 93, 239); // Purple
 $color-6: rgb(0, 245, 212); // Aqua
 $color-7: rgb(255, 255, 255); // White
 $color-8: rgb(0, 0, 0); // Black
+$p-opacity: rgba($color-7, 0.5);
 
 //variable - typography
 $primary-font: 'Elsie', 'cursive';
@@ -88,9 +99,7 @@ header, .summary {
     background-color: $color-1;
     margin-bottom: $basic-margin-bottom;
     p {
-        background-color: rgba($color-7, 0.5);
-        margin: 0;
-        padding: 1rem;
+        @include paragraph; 
         }
     @include screen-breakpoint {
         padding: $container-padding-lg;
@@ -104,7 +113,6 @@ header, .summary {
         :nth-child(2) {
             grid-row: 2;
             grid-column: 1;
-            //background: rgba(255, 255, 255, 0.5);
         }
         :nth-child(3) {
             grid-row: 3;
@@ -124,14 +132,10 @@ header, .summary {
     color: $color-8;
     margin-bottom: $basic-margin-bottom;
         p {
-            background-color: rgba($color-7, 0.5);
-            margin: 0;
-            padding: 1rem;
+            @include paragraph;
             }
     @include screen-breakpoint {
-        max-width: 45rem;
-        margin: 0 auto; 
-        padding: $container-padding-lg;
+        @include lg-screen-container;
         
     }
 }
@@ -142,15 +146,13 @@ header, .summary {
     margin-bottom: $basic-margin-bottom;
     margin-top: $basic-margin-bottom;
     p {
-        background-color: rgba($color-7, 0.5);
-        margin: 0;
-        padding: 1rem;
+        @include paragraph;
         }
     @include screen-breakpoint {
         padding: $container-padding-lg;
         display: grid;
         grid-template: 20% 80% / 1fr 1fr 1fr;
-        grid-column-gap: 1.5rem
+        grid-column-gap: 1.5rem;
         h3 {grid-row: 1;
             grid-column: 1;
         }
@@ -174,9 +176,7 @@ header, .summary {
     background-color: $color-6;
     margin-bottom: $basic-margin-bottom;
     p {
-        background-color: rgba($color-7, 0.5);
-        margin: 0;
-        padding: 1rem;
+        @include paragraph;
         }
     @include screen-breakpoint {
         max-width: 25rem;
@@ -187,17 +187,10 @@ header, .summary {
     background-color: $color-3;
     margin-bottom: $basic-margin-bottom;
     p {
-        background-color: rgba($color-7, 0.5);
-        margin: 0;
-        padding: 1rem;
+        @include paragraph; 
         }
     @include screen-breakpoint {
-        max-width: 45rem;
-        margin: 0 auto; 
-        padding: $container-padding-lg;
-        /*p {
-            background-color: rgba($color-3, 0.5);
-        }*/
+        @include lg-screen-container; 
     }
 }
 //footer (icons and such)
