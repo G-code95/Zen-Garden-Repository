@@ -154,7 +154,18 @@ header, .summary {
 
     }
 }
-
+.preamble::before {
+    content: $svg-blue_sucker;
+    animation: spin 5s infinite linear;
+}
+@keyframes spin {
+from {
+    transform:rotate(0deg);
+}
+to {
+    transform:rotate(360deg);
+}
+}
 //explanation
 /*.explanation::before {
     content: url(svg/candyshoppegraphics-02.svg);
