@@ -10,7 +10,7 @@
 @mixin paragraph {
     background-color: $p-opacity;
     margin: 0;
-    padding: 1rem;
+    padding: 2.5rem;
 }
 @mixin lg-screen-container {
     max-width: 45rem;
@@ -52,9 +52,10 @@ $p-opacity: rgba($color-7, 0.5);
 //variable - typography
 $primary-font: 'Elsie', 'cursive';
 $secondary-font: 'Quattrocento Sans', sans-serif;
-$h1-fontsize: 4rem;
-$h3-fontsize: 1.5rem;
-$p-fontsize: 1rem;
+$h1-fontsize: 6rem;
+$h2-fontsize: 2.5rem;
+$h3-fontsize: 2.5rem;
+$p-fontsize: 1.7rem;
 
 //variable - svg
 $svg-icecream: url("data:image/svg+xml,%3Csvg id='Layer_1' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%23e261a4;%7D.cls-2,.cls-4,.cls-6%7Bfill:%23fff;stroke-miterlimit:10;%7D.cls-2,.cls-4%7Bstroke:%23d1d3d4;%7D.cls-2%7Bstroke-width:5px;%7D.cls-3%7Bfill:%2368c7bd;%7D.cls-4%7Bstroke-width:4.84px;%7D.cls-5%7Bfill:%23ee2a7b;%7D.cls-6%7Bstroke:%23e6e7e8;stroke-width:0.6px;opacity:0.2;%7D%3C/style%3E%3C/defs%3E%3Cellipse class='cls-1' cx='365.5' cy='469.5' rx='181.5' ry='131.5'/%3E%3Cellipse class='cls-1' cx='549.5' cy='462.5' rx='201.5' ry='131.5'/%3E%3Cpath class='cls-2' d='M184,530l48,300s234.61,122,479.81,0L741,544S384,646,184,530Z'/%3E%3Cellipse class='cls-1' cx='495' cy='322.5' rx='147' ry='131.5'/%3E%3Cpath class='cls-3' d='M201.87,641.66s378.69,90.17,529.16,0l-5.55,54.4s-188.84,101.57-514.91,0Z'/%3E%3Cpath class='cls-4' d='M183.72,498s339.52,104.25,553.86,17.38c0,0,36,24.12-10,46.12,0,0-249.65,95-543.89-23.5C183.72,538,155.1,506.5,183.72,498Z'/%3E%3Cpath class='cls-5' d='M610,209c0,27.61-25.74,50-57.5,50S495,236.61,495,209s25.74-50,57.5-50a65.09,65.09,0,0,1,21,3.42C594.85,169.71,610,187.82,610,209Z'/%3E%3Cellipse class='cls-6' cx='583.69' cy='189.02' rx='10.56' ry='22.05' transform='translate(-16.31 317.17) rotate(-30)'/%3E%3Cpath class='cls-5' d='M556.09,172s42-42.46,57.23-17.59l9.68-15.2S587.32,109.42,556.09,172Z'/%3E%3C/svg%3E");
@@ -90,6 +91,11 @@ h1 {
     text-align: center;
     text-transform: uppercase;
 }
+
+h2 {
+    font-size: $h2-fontsize;
+}
+
 h1, header, .summary {
     color: $color-2;
 }
@@ -108,6 +114,7 @@ header,
 
 h3 {
     font-size: $h3-fontsize;
+    color: $color-7;
 }
 p {
     font-size: $p-fontsize;
@@ -130,19 +137,7 @@ header, .summary {
 @include screen-breakpoint {
     text-align: right;
 }}
-.summary::after {
-        content: $svg-blue_sucker;
-        animation: spin 5s infinite linear;
-}
-@keyframes spin {
-    from {
-        transform:rotate(0deg);
-    }
-    to {
-        transform:rotate(360deg);
-    }
-}
-//preamble 
+
 .preamble {
     background-color: $color-1;
     margin-bottom: $basic-margin-bottom;
@@ -154,10 +149,29 @@ header, .summary {
 
     }
 }
-.preamble::before {
-    content: $svg-blue_sucker;
-    animation: spin 5s infinite linear;
+
+
+.preamble h3 {
+    margin-bottom: 20px;
 }
+.summary {
+    margin-bottom: 500px;
+  }
+  
+ 
+  .preamble::before {
+    content: $svg-blue_sucker;
+    animation: spin 5s linear infinite;
+    //moves the candy up on the page
+    margin-top: -600px;
+    //accommodates for offset margins in large screens
+    margin-left: -1%;
+    width: 90%;
+    // pulls graphic out of block flow
+    position: absolute;
+    //puts it on lowest "layer"
+    z-index: -100;
+  }
 @keyframes spin {
 from {
     transform:rotate(0deg);
@@ -170,13 +184,16 @@ to {
 /*.explanation::before {
     content: url(svg/candyshoppegraphics-02.svg);
 }*/
-.explanation::before {
-content: $svg-purple_wrapper_candy;
+.explanation h3::before {
+content: url('images/purple-candy.svg');
+margin-left: 400px;
 }
-.explanation:after {
-    content: $svg-blue_wrapper_candy;
+.explanation::after {
+    content: url('images/blue-candy.svg');
+    margin-left: -400px;
     }
 .explanation {
+
     background-color: $color-3;
     color: $color-8;
     margin-bottom: $basic-margin-bottom;
@@ -188,6 +205,42 @@ content: $svg-purple_wrapper_candy;
         
     }
 }
+
+
+//explanation
+.main {
+    margin-top: 100px;
+  }
+  
+  
+  .explanation:hover {
+    animation: dance 9s infinite;
+  }
+  
+  @keyframes dance {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    10% {
+        transform: translate(0px, 0px) rotate(0deg);
+    }
+
+    50% {
+        transform: translate(.5px, -1px) rotate(-16deg);
+    }
+
+
+
+}
+//   .explanation:after {
+//     content: $svg-blue_wrapper_candy;
+//     animation: wiggle 3s cubic-bezier(0.74, -0.01, 1, 1) infinite;
+//   }
+  
+  
+  
+
 
 //participation
 .participation {
@@ -215,11 +268,21 @@ content: $svg-purple_wrapper_candy;
 }
 .benefits::after {
     content: $svg-purple_candybar;
+
 }
 
+
+
+
 //requirements
-.requirements::before, .requirements::after {
+.requirements::before {
     content: $svg-donuts;
+    margin-left: -400px;
+}
+
+.requirements::after {
+    content: $svg-donuts;
+    margin-left: 400px;
 }
 .requirements {
     background-color: $color-3;
@@ -230,6 +293,30 @@ content: $svg-purple_wrapper_candy;
     @include screen-breakpoint {
         @include lg-screen-container; 
     }
+}
+
+
+
+
+.requirements:hover {
+    animation: dance2 4s infinite;
+  }
+  
+  @keyframes dance2 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    10% {
+        transform: translate(0px, 0px) rotate(0deg);
+    }
+
+    50% {
+        transform: translate(.5px, -1px) rotate(-10deg);
+    }
+
+
+
 }
 //footer (icons and such)
 footer:before {
